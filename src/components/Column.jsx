@@ -39,7 +39,7 @@ function Column({ groupName, tickets, users, grouping, ordering }) {
           {grouping === "priority" && groupName === "0" && <PiDotsThreeBold/>}
           {/* {grouping === "status" && <PiDotsThreeBold/>} */}
          
-          <h3> {label} <span>{tickets.length}</span></h3>
+          <h3> {label} <span className="ticketLength">{tickets.length}</span></h3>
         </div>
         <div className="userTag">
           <IoAddOutline />
