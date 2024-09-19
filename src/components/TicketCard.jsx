@@ -18,7 +18,7 @@ function TicketCard({ ticket }) {
         <div className="tags">
           {ticket.tag.map((t, index) => (
             <div>
-              <PiDotsThreeBold className="threeDot" />
+              {/* <PiDotsThreeBold className="threeDot" /> */}
               <span key={index} className="tag">{t}</span>
             </div>
           ))}
