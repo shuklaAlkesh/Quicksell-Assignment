@@ -1,17 +1,24 @@
+
 .ticket-card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  display: flex;
+  align-items: center;
 }
+
 
 .ticket-card h3 {
   font-size: 16px;
   margin: 0 0 10px;
 }
 
+
 .ticket-card .tags {
   margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap; 
 }
 
 .ticket-card .tag {
@@ -21,4 +28,49 @@
   font-size: 12px;
   margin-right: 5px;
   display: inline-block;
+}
+
+.round {
+  position: relative;
+  margin-right: 15px; 
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 3px;
+  width: 6px;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #2a85f6;
+  border-color: #2a85f6;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
 }

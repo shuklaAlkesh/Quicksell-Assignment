@@ -4,7 +4,9 @@ import "../styles/Column.css";
 import { FaUserCircle } from "react-icons/fa";
 import { IoAddOutline } from "react-icons/io5";
 import { PiDotsThreeBold } from "react-icons/pi";
-// import {Three_dot} from '../assets/._3 dot menu.svg';
+// import {Three_dot} from '../assets/._3 dot menu.svg'; // this file we can't be able to access show that i use react icons
+
+import { RiProgress4Line } from "react-icons/ri";
 const priorityLabels = {
   4: "Urgent",
   3: "High",
@@ -35,7 +37,8 @@ function Column({ groupName, tickets, users, grouping, ordering }) {
         <div className="userTag">
           {grouping === "user" && <FaUserCircle className="userIcon" />}
           {grouping === "priority" && groupName === "0" && <PiDotsThreeBold/>}
-          {/* {grouping === "user" && <FaUserCircle className="userIcon" />} */}
+          {/* {grouping === "status" && <PiDotsThreeBold/>} */}
+         
           <h3> {label} <span>{tickets.length}</span></h3>
         </div>
         <div className="userTag">
