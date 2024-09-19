@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../styles/TicketCard.css';
-
+import { PiDotsThreeBold } from "react-icons/pi";
 function TicketCard({ ticket }) {
   const priorityLabels = ['No priority', 'Low', 'Medium', 'High', 'Urgent'];
 
@@ -17,7 +17,10 @@ function TicketCard({ ticket }) {
         {/* <p>Priority: {priorityLabels[ticket.priority]}</p> */}
         <div className="tags">
           {ticket.tag.map((t, index) => (
-            <span key={index} className="tag">{t}</span>
+            <div>
+              <PiDotsThreeBold className="threeDot" />
+              <span key={index} className="tag">{t}</span>
+            </div>
           ))}
         </div>
       </div>

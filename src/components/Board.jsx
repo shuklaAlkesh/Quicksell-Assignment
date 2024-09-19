@@ -3,7 +3,6 @@ import Column from "./Column";
 import "../styles/Board.css";
 
 function Board({ tickets, users, grouping, ordering }) {
-
   const groupTickets = () => {
     if (grouping === "user") {
       return tickets.reduce((acc, ticket) => {
